@@ -1,4 +1,6 @@
 # English strings go here for Rails i18n
 en:
   # my_label: "My label"
+  project_module_test_permission: TestPermission
   label_menu_caption: ProjectMenu
+  permission_view_test: ViewTest

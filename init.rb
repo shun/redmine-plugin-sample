@@ -7,10 +7,6 @@ Redmine::Plugin.register :sample_plugin do
   author_url 'http://example.com/about'
 
   # --- from here to add the menu item on project menu ---
-  permission    :test001, # route symbol
-                {:test => [:index]},
-                :public => true
-
   menu          :project_menu,
                 :test001, # route symbol
                 {:controller => 'test', :action => 'index'},
@@ -19,4 +15,9 @@ Redmine::Plugin.register :sample_plugin do
                 :param => :project_id
   # --- to here to add the menu item on project menu ---
 
+  # --- from here to add the permission ---
+  project_module :test_permission do
+    permission :view_test, :test => [:index]
+  end
+  # --- to here to add the permission ---
 end
